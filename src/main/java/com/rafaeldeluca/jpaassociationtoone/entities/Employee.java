@@ -1,9 +1,9 @@
-package entities;
+package com.rafaeldeluca.jpaassociationtoone.entities;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "tb_employee")
+@Table(name="tb_employee")
 public class Employee {
 
     @Id
@@ -20,10 +20,11 @@ public class Employee {
 
     }
 
-    public Employee(Long id, String name, Double salary) {
+    public Employee(Long id, String name, Double salary , Department department) {
         this.id = id;
         this.name = name;
         this.salary = salary;
+        this.department = department;
     }
 
     public Long getId() {

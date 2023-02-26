@@ -1,4 +1,4 @@
-package entities;
+package com.rafaeldeluca.jpaassociationtoone.entities;
 
 
 
@@ -14,7 +14,7 @@ public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long name;
+    private String name;
 
     @OneToMany(mappedBy = "department")
     private List<Employee> emplloyees = new ArrayList<Employee>();
@@ -22,7 +22,7 @@ public class Department {
     public Department() {
 
     }
-    public Department(Long id, Long name) {
+    public Department(Long id, String name) {
         this.id = id;
         this.name = name;
     }
@@ -35,11 +35,11 @@ public class Department {
         this.id = id;
     }
 
-    public Long getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(Long name) {
+    public void setName(String name) {
         this.name = name;
     }
 

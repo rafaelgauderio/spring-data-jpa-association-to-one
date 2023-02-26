@@ -1,6 +1,6 @@
-package repositories;
+package com.rafaeldeluca.jpaassociationtoone.repositories;
 
-import entities.Employee;
+import com.rafaeldeluca.jpaassociationtoone.entities.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
